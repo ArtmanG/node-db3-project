@@ -5,13 +5,15 @@ module.exports = {
     findById,
     findSteps,
     add,
-    addStep,
     update,
     remove,
+    addStep, //stretch
   };
 
 function find() {
   return db("schemes");
 }
 
-
+function findById(id) {
+    return db("schemes").where({ id }).first();
+  }

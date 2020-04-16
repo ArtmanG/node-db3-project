@@ -40,3 +40,6 @@ function findById(id) {
       .then(() => findById(id));
   }
   
+  function remove(id) {
+    return db("schemes").where("id", id).del();
+  }

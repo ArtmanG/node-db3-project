@@ -33,3 +33,10 @@ function findById(id) {
       });
   }
   
+  function update(changes, id) {
+    return db("schemes")
+      .where({ id })
+      .update(changes)
+      .then(() => findById(id));
+  }
+  
